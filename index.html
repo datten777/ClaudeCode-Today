@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>今日は何の日 - 日時・カレンダー情報</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+
+  <header class="clock-header">
+    <p class="clock-label">現在時刻</p>
+    <div class="clock" id="clock">--:--:--</div>
+    <div class="date-line" id="dateLine">----年--月--日(-)</div>
+    <div class="day-progress-wrap">
+      <div class="day-progress-bar"><div class="day-progress-fill" id="dayProgressFill"></div></div>
+      <span class="day-progress-label" id="dayProgressLabel">今日の経過 --%</span>
+    </div>
+  </header>
+
+  <main class="grid">
+
+    <section class="card">
+      <h2>基本情報</h2>
+      <dl class="info-list" id="basicInfo"></dl>
+    </section>
+
+    <section class="card">
+      <h2>暦・年間の進み具合</h2>
+      <dl class="info-list" id="calendarInfo"></dl>
+      <div class="year-progress-wrap">
+        <div class="day-progress-bar"><div class="day-progress-fill" id="yearProgressFill"></div></div>
+        <span class="day-progress-label" id="yearProgressLabel">今年の経過 --%</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>天文情報</h2>
+      <dl class="info-list" id="astroInfo"></dl>
+      <p class="hint" id="locationHint"></p>
+    </section>
+
+    <section class="card">
+      <h2>祝日情報</h2>
+      <dl class="info-list" id="holidayInfo"></dl>
+    </section>
+
+    <section class="card wide">
+      <h2 class="collapsible" id="holidayListToggle">今年(<span id="holidayListYear"></span>)の祝日一覧 <span class="chevron">▾</span></h2>
+      <ul class="holiday-list" id="holidayList"></ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>すべての情報はブラウザ内でその場に計算しています。天文情報の位置情報は許可がない場合、東京の座標で概算します。</p>
+  </footer>
+
+</div>
+<script src="script.js" defer></script>
+</body>
+</html>
